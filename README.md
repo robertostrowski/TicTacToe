@@ -1,17 +1,18 @@
-# Kó³ko i krzy¿yk
+# KÃ³Å‚ko i krzyÅ¼yk
 
 ## Uruchamianie
 
-1.a) W lokalizacji zawieraj¹cej pliki: "TicTacToe.jar" oraz "TicTacToe.bat" nale¿y uruchomiæ plik TicTacToe.bat. Spowoduje to otwarcie konsoli i uruchomienie programu.
-1.b) Alternatywnie, w lokalizacji zawieraj¹cej TicTacToe.jar mo¿na otworzyæ wiersz poleceñ / PowerShell i uruchomiæ program komend¹
+1.a) W lokalizacji zawierajÄ…cej pliki: "TicTacToe.jar" oraz "TicTacToe.bat" naleÅ¼y uruchomiÄ‡ plik TicTacToe.bat. Spowoduje to otwarcie konsoli i uruchomienie programu.
+
+1.b) Alternatywnie, w lokalizacji zawierajÄ…cej TicTacToe.jar moÅ¼na otworzyÄ‡ wiersz poleceÅ„ / PowerShell i uruchomiÄ‡ program komendÄ…
 ```
 java -jar TicTacToe.jar
 ```
 
 ## Rozgrywka, zasady
-* Wyœwietlona jest plansza, gra rozpoczyna siê od tury gracza "X"
-* W swojej turze gracz X lub O podaje wspó³rzêdne pola, w które chce wstawiæ swój symbol. Tura siê koñczy w momencie poprawnego wstawienia symbolu.
-* Gra siê koñczy, gdy któryœ z graczy posiada na planszy pewn¹ iloœæ (3) symboli w rzêdzie, kolumnie, lub po skosie, lub gdy na planszy nie ma wiêcej wolnych pól.
-* Poprawne przyk³ady podawanych wspó³rzêdnych: a1, B2, c3
+* WyÅ›wietlona jest plansza, gra rozpoczyna siÄ™ od tury gracza "X"
+* W swojej turze gracz X lub O podaje wspÃ³Å‚rzÄ™dne pola, w ktÃ³re chce wstawiÄ‡ swÃ³j symbol. Tura siÄ™ koÅ„czy w momencie poprawnego wstawienia symbolu.
+* Gra siÄ™ koÅ„czy, gdy ktÃ³ryÅ› z graczy posiada na planszy pewnÄ… iloÅ›Ä‡ (3) symboli w rzÄ™dzie, kolumnie, lub po skosie, lub gdy na planszy nie ma wiÄ™cej wolnych pÃ³l.
+* Poprawne przykÅ‚ady podawanych wspÃ³Å‚rzÄ™dnych: a1, B2, c3
 
-## Mi³ej zabawy 
+## MiÅ‚ej zabawy 
