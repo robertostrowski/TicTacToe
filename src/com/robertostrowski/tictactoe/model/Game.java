@@ -11,7 +11,10 @@ public class Game {
     /**
      *     Number of cells in a row and a column
      */
-    public static final int dimension = 3;
+    public final int dimension = 3;
+    /**
+     *  Number of symbols in a row required for victory
+     */
     public final int inARowToWin = 3;
     private final int maxTurns;
     private int turnCount;

@@ -23,6 +23,7 @@ public class Controller {
     public Controller(Game game, View view) {
         this.game = game;
         this.view = view;
+        this.view.setMaxCoordinate(game.inARowToWin - 1);
     }
 
     /**

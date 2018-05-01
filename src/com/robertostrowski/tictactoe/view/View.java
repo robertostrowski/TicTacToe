@@ -1,6 +1,5 @@
 package com.robertostrowski.tictactoe.view;
 
-import com.robertostrowski.tictactoe.model.Game;
 import com.robertostrowski.tictactoe.model.GameCell;
 
 import java.util.Scanner;
@@ -14,6 +13,7 @@ import java.util.Scanner;
  */
 public class View {
     private Scanner scanner = new Scanner(System.in);
+    private int maxCoordinate = 2;
 
     /**
      * Gets input from player, i.e A2 or b3
@@ -30,14 +30,14 @@ public class View {
         coordinates[1] = input.charAt(1) - 49;                      // "0" ASCII Code is 48, but arrays start at 0
 
         // if coordinates are too big or small
-        if (coordinates[0] < 0 || coordinates[0] > (Game.dimension - 1) || coordinates[1] < 0 || coordinates[1] > (Game.dimension - 1)) {
+        if (coordinates[0] < 0 || coordinates[0] > maxCoordinate || coordinates[1] < 0 || coordinates[1] > maxCoordinate) {
             throw new IncorrectInputException();
         }
         return coordinates;
     }
 
     /**
-     * Prints a formated game grid to the command prompt
+     * Prints a formatted game grid to the command prompt
      * @param gamegrid grid to print to user
      */
     public void printGameGrid(GameCell[][] gamegrid) {
@@ -86,5 +86,9 @@ public class View {
             new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
         } catch (Exception e) {
         }
+    }
+
+    public void setMaxCoordinate(int max){
+        this.maxCoordinate = max;
     }
 }

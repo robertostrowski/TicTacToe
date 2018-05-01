@@ -47,13 +47,13 @@ class GameTest {
     @Test
     void checkForVictory() {
         Game game = new Game();
-        int[][] tab = new int[Game.dimension][Game.dimension];
+        int[][] tab = new int[game.dimension][game.dimension];
 
         // check vertical
-        for (int column = 0; column < Game.dimension; column++) {
+        for (int column = 0; column < game.dimension; column++) {
             clearTab(tab);
             // fill a column with "X"
-            for (int row = 0; row < Game.dimension; row++)
+            for (int row = 0; row < game.dimension; row++)
                 tab[column][row] = 1;
 
             setGrid(game, tab);
@@ -62,10 +62,10 @@ class GameTest {
         }
 
         // check horizontal
-        for (int row = 0; row < Game.dimension; row++) {
+        for (int row = 0; row < game.dimension; row++) {
             clearTab(tab);
             // fill a column with "X"
-            for (int column = 0; column < Game.dimension; column++)
+            for (int column = 0; column < game.dimension; column++)
                 tab[column][row] = 1;
 
             setGrid(game, tab);
@@ -74,10 +74,10 @@ class GameTest {
         }
 
         // check diagonals down-right
-        for (int i = 0 ; i < Game.dimension - game.inARowToWin + 1; i++) {
-            for (int j = 0 ; j < Game.dimension - game.inARowToWin + 1; j++) {
+        for (int i = 0 ; i < game.dimension - game.inARowToWin + 1; i++) {
+            for (int j = 0 ; j < game.dimension - game.inARowToWin + 1; j++) {
                 clearTab(tab);
-                for (int k = 0; k < Game.dimension; k++) {
+                for (int k = 0; k < game.dimension; k++) {
                     tab[i + k][j + k] = 1;
                 }
                 setGrid(game, tab);
@@ -86,10 +86,10 @@ class GameTest {
             }
         }
         // check for diagonals down - left
-        for (int i = game.inARowToWin - 1 ; i < Game.dimension; i++) {
-            for (int j = 0 ; j < Game.dimension - game.inARowToWin + 1; j++) {
+        for (int i = game.inARowToWin - 1 ; i < game.dimension; i++) {
+            for (int j = 0 ; j < game.dimension - game.inARowToWin + 1; j++) {
                 clearTab(tab);
-                for (int k = 0; k < Game.dimension; k++) {
+                for (int k = 0; k < game.dimension; k++) {
                     tab[i - k][j + k] = 1;
                 }
                 setGrid(game, tab);
@@ -117,8 +117,8 @@ class GameTest {
      * @param game game object to reset
      */
     private void resetGrid(Game game) {
-        for (int i = 0; i < Game.dimension; i++)
-            for (int j = 0; j < Game.dimension; j++) {
+        for (int i = 0; i < game.dimension; i++)
+            for (int j = 0; j < game.dimension; j++) {
                 game.resetCell(i, j);
             }
     }
@@ -132,8 +132,8 @@ class GameTest {
     private void setGrid(Game game, int[][] gridTab) {
         resetGrid(game);
         GameCell.CellState cellState;
-        for (int i = 0; i < Game.dimension; i++)
-            for (int j = 0; j < Game.dimension; j++) {
+        for (int i = 0; i < game.dimension; i++)
+            for (int j = 0; j < game.dimension; j++) {
                 switch (gridTab[i][j]) {
                     case 0:
                         cellState = GameCell.CellState.EMPTY;
